@@ -1,0 +1,84 @@
+.SignIn {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.SI-Container {
+  padding: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+}
+
+.SI-Form {
+  padding: 20px;
+  max-width: 600px;
+  min-width: 300px;
+  width: 100%;
+  border-radius: 10px;
+  margin: 0 auto;
+  background: #212122;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, .41);
+}
+
+.FormPseudo,
+.FormPassword,
+.FormMail {
+  margin-bottom: 20px;
+
+}
+
+.FormPseudo label,
+.FormPassword label,
+.FormMail label {
+  display: block;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 12px;
+  font-size: 17px;
+  text-align: left;
+}
+
+.FormPseudo input,
+.FormPassword input,
+.FormMail input {
+  border: none;
+  padding: 10px;
+  font-size: 17px;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+  background-color: #322d37;
+}
+
+.Btn-Connexion {
+  background-color: #fff;
+  color: #111215;
+  border-radius: 20px;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+  padding: 10px 50px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: 5px;
+
+}
+
+.Btn-Connexion:hover {
+  opacity: 0.7;
+}
+
+.SI-Form p {
+  color: #fff;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.SI-Form span {
+  border-bottom: 1px solid #fff;
+}

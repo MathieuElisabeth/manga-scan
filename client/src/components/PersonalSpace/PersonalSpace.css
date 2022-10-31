@@ -1,0 +1,69 @@
+.PersonalSpace {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  padding-top: 140px;
+  height: 100%;
+  padding-left: 250px;
+}
+
+.MyList {
+  position: fixed;
+  left: 0;
+  top: 80px;
+  width: 250px;
+  height: 100%;
+  background-color: #212122;
+  /* background-color: #3d3d3d; */
+}
+
+.MyList ul {
+  list-style: none;
+  width: 100%;
+}
+
+.MyList ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+  border-bottom: 1px solid #333;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all ease-out .3s;
+}
+.MyList ul li:hover {
+  background: #6a6a6a;
+}
+
+.MyList ul .active {
+  background: #6a6a6a;
+}
+
+.MyList ul li p {
+  padding-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .PersonalSpace {
+    padding-left: 60px;
+  }
+
+  .MyList {
+    width: 60px;
+  }
+
+  .MyList ul li {
+    justify-content: center;
+  }
+
+  .MyList ul li p {
+    display: none;
+  }
+}

@@ -1,0 +1,114 @@
+.LastRelease {
+  padding-top: 22px;
+  padding-bottom: 60px;
+}
+
+.LR-Container {
+  padding: 0 126px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  text-align: left;
+  overflow: hidden;
+}
+
+.LR-Container h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 60px;
+}
+
+.LR-Container .SliderManga {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.MangaCard {
+  flex: 0 0 20%;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  border-radius: 15px;
+  margin-right: 25px;
+  text-align: center;
+  /* background-color: #212122; */
+  cursor: pointer;
+  transition: all ease-out .3s;
+
+}
+
+.MangaCard:hover {
+  transform: scale(1.05);
+}
+
+.MangaContainer {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.MangaImage {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.MangaImage img {
+  max-width: 100%;
+  height: 200px;
+  vertical-align: middle;
+}
+
+.MangaInfo {
+  padding: 15px 20px;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.MangaInfo p {
+  margin: 0;
+  color: #888;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+@media (max-width : 736px) {
+  .LR-Container {
+    padding: 0 80px;
+  }
+
+  .Mangainfo h3 {
+    font-size: 14px;
+  }
+
+  .MangaInfo p {
+    margin: 0;
+    color: #888;
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  .LR-Container h1 {
+    font-size: 20px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .LR-Container h1 {
+    font-size: 16px;
+  }
+}

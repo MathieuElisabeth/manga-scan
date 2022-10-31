@@ -1,0 +1,306 @@
+.FicheManga {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0 105px;
+  padding-top: 100px;
+}
+
+.FM-Header {
+  display: flex;
+  width: 100%;
+  border-radius: 15px;
+  padding: 45px 50px;
+  padding-left: 0;
+  margin-bottom: 40px;
+  color: #fff;
+  background-color: #212122;
+}
+
+.FM-HeaderManga {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 33%;
+}
+
+.FM-MangaCover {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  height: 300px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.InfoList h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.FM-HeaderManga p {
+  color: #888;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.FM-HeaderInfo {
+  display: flex;
+  justify-content: flex-start;
+  flex: 0 0 66.7%;
+}
+
+.InfoList {
+  width: 100%;
+}
+
+.InfoList ul {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  list-style: none;
+}
+
+.InfoList ul li {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.Resume {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.Resume h2 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.Resume p {
+  font-size: 14px;
+  color: #fff;
+}
+
+.FM-Main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-radius: 15px;
+  padding: 45px 50px;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.FM-Main h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.FM-Input {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  min-width: 250px;
+  margin-bottom: 30px;
+}
+
+.FM-Input input {
+  width: 100%;
+  min-width: 200px;
+  font-size: 20px;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+}
+
+.ChapterList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.ChapterBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 12px;
+  border-radius: 15px;
+  padding: 10px 0;
+  background-color: #212122;
+  cursor: pointer;
+}
+
+.ChapterBox p:first-child {
+  font-size: 15px;
+}
+
+.ChapterBox p span {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.ChapterBox:hover {
+  background-color: #3a3a3b;
+}
+
+.SpecialTools {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.Btn-StartRead {
+  background-color: #fff;
+  color: #111215;
+  border-radius: 20px;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+  padding: 10px 50px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: 5px;
+
+}
+
+.Btn-StartRead:hover {
+  opacity: 0.7;
+}
+
+.SpecialTools div {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.SpecialTools div .far,.fas {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media (max-width : 360px) {
+  .Btn-StartRead {
+    font-size: 12px;
+  }
+}
+
+@media (max-width : 480px) {
+
+  .FicheManga {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .ChapterList {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+  .Resume p:last-child {
+    margin-bottom: 10px;
+  }
+
+  .SpecialTools {
+    flex-direction: column;
+  }
+
+  .SpecialTools button {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .SpecialTools div {
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  .FM-Input input::placeholder {
+    font-size: 12px;
+  }
+}
+
+@media (max-width : 768px) {
+  .FicheManga {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .FM-Main h1 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .FM-Main ul li {
+    font-size: 12px;
+  }
+
+  .Resume p,
+  .Resume h2 {
+    font-size: 12px;
+  }
+
+  .InfoList ul li {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  .ChapterList {
+    grid-template-columns: repeat(2, 1fr);
+    ;
+  }
+}
+
+
+@media (max-width : 940px) {
+  .FM-Header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 50px;
+  }
+
+  .FM-HeaderManga {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .FM-MangaCover {
+    width: 100%;
+  }
+
+  .FM-HeaderInfo {
+    flex-direction: column;
+  }
+
+  .InfoList h3 {
+    text-align: center;
+  }
+
+  .FM-Header ul {
+    align-items: center;
+  }
+
+  .Resume {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+}

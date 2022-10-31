@@ -1,0 +1,85 @@
+.Banner {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.Banner::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 128px;
+  width: 100%;
+  top: 0;
+  background-image: linear-gradient(180deg, rgba(17, 18, 21, .71), transparent);
+  z-index: 2;
+}
+
+.Banner::after {
+  display: block;
+  content: "";
+  position: absolute;
+  height: 400px;
+  width: 100%;
+  bottom: 0;
+  background-image: linear-gradient(180deg, rgba(17, 18, 21, 0), #171616);
+  z-index: 2;
+}
+
+.BannerCover {
+  height: 100%;
+  position: relative;
+}
+
+.BannerCover img {
+  width: 100%;
+  object-fit: cover;
+  height: 590px;
+}
+
+.BannerInfo {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 80px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -.18px;
+  z-index: 12;
+}
+
+.BannerInfo p {
+  font-size: 20px;
+  margin: 0 auto 16px;
+  max-width: 310px;
+}
+
+.BannerBtn {
+  display: inline-block;
+  position: relative;
+  outline: none;
+  text-decoration: none;
+}
+
+.BannerBtn button {
+  width: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  transition: background-color .2s;
+  font-size: 14px;
+  padding: 8px 16px;
+  min-width: 160px;
+  border-radius: 20px;
+  color: #fff;
+  background-color: #111215;
+  user-select: none;
+  cursor: pointer;
+  transition: all .3s ease-out;
+}
+
+.BannerBtn button:hover {
+  background-color: #fff;
+  color: #111215;
+}

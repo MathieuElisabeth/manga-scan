@@ -1,0 +1,61 @@
+.MyMangas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+  width: 100%;
+}
+
+.MyMangas div {
+  width: 100%;
+}
+
+.MyMangas h1 {
+  color: #fff;
+  font-size: 24px;
+  text-align: left;
+}
+
+.MY-Fav,
+.MY-Read {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.MY-Fav h2,
+.MY-Read h2 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.MangaFav,
+.MangaToRead {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+}
+
+@media (max-width: 480px) {
+
+  .MyMangas h1 {
+    text-align: center;
+  }
+
+  .MangaFav,
+  .MangaToRead {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .MangaFav,
+  .MangaToRead {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
