@@ -12,7 +12,9 @@ const Banner = ({ mangas }) => {
   const [randomManga, setRandomManga] = useState()
 
   useEffect(() => {
-    setRandomManga(mangas[Math.floor(Math.random() * mangas.length)]);
+    if (mangas) {
+      setRandomManga(mangas[Math.floor(Math.random() * mangas.length)]);
+    }
   }, [mangas])  
 
 
@@ -30,7 +32,7 @@ const Banner = ({ mangas }) => {
   return (
     <div className='Banner'>
       {
-        randomManga && (
+        randomManga ? (
           <>
             <div className='BannerInfo'>
               <p>{randomManga?.name}</p>
@@ -44,6 +46,8 @@ const Banner = ({ mangas }) => {
               <img className='BannerImage' src={randomManga?.banner} alt='' />
             </div>
           </>
+        ) : (
+          <div className='BannerSkeleton'></div>
         )
       }
     </div>

@@ -8,12 +8,12 @@ import LastUpdate from './LastUpdate/LastUpdate'
 import axios from 'axios'
 
 const Homapage = () => {
-  const [mangaList, setMangaList] = useState([])
+  const [mangaList, setMangaList] = useState()
 
   useEffect(() => {
       axios.get(`${process.env.REACT_APP_API_URL}/api/manga`)
           .then(res => {
-              setMangaList([...res.data])
+              setMangaList(res.data)
           })
   }, [])
 

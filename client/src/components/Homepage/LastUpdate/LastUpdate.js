@@ -5,6 +5,7 @@ import { useMediaQuery } from '../../../hook/useMediaQuery'
 import './LastUpdate.css'
 
 import Manga from '../../Manga/Manga'
+import MangaSkeleton from '../../MangaSkeleton/MangaSkeleton';
 
 const MangaSlide = ({ mangas }) => {
   let settings = {
@@ -62,7 +63,7 @@ const MangaSlide = ({ mangas }) => {
       <div className='NM-Container'>
         <h1>Manga Populaires</h1>
           {
-            mangas && (
+            mangas ? (
               <Slider {...settings}>
               {mangas
                 .sort((a,b) => b.views - a.views)
@@ -76,6 +77,15 @@ const MangaSlide = ({ mangas }) => {
               ))}
               </Slider>
               
+            ) : (
+              <Slider {...settings}>
+                {
+                  Array.from(Array(5).keys())
+                    .map(item => (
+                      <MangaSkeleton/>
+                    ))
+                }
+              </Slider>
             )
           }
     

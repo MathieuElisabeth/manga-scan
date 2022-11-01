@@ -8,6 +8,7 @@ import { useMediaQuery } from '../../../hook/useMediaQuery';
 
 import './LastReleasePopular.css'
 import Manga from '../../Manga/Manga';
+import MangaSkeleton from '../../MangaSkeleton/MangaSkeleton';
 
 const LastRelease = ({ mangas }) => {
  
@@ -65,7 +66,7 @@ const LastRelease = ({ mangas }) => {
       <div className='LR-Container'>
         <h1>Les dernières sorties</h1>
         {
-            mangas && (
+            mangas ? (
             <Slider {...settings}>
               {mangas
                 .map((manga, index) => (
@@ -78,6 +79,15 @@ const LastRelease = ({ mangas }) => {
                   />
               ))}
             </Slider>
+            ) : (
+              <Slider {...settings}>
+                {
+                  Array.from(Array(5).keys())
+                    .map(item => (
+                      <MangaSkeleton/>
+                    ))
+                }
+              </Slider>
             )
         }
       </div>

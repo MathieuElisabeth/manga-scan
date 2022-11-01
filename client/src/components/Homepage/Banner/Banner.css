@@ -83,3 +83,9 @@
   background-color: #fff;
   color: #111215;
 }
+
+.BannerSkeleton {
+  width: 100%;
+  height: 590px;
+  animation: skeleton-loading 1s linear infinite alternate;
+}

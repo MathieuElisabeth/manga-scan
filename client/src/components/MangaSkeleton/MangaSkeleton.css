@@ -1,0 +1,26 @@
+
+.MangaSkeleton {
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: 25px;
+}
+
+.MangaImageSkeleton {
+  border-radius: 4px;
+  margin: auto;
+  width: 135px;
+  height: 200px;
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.MangaInfoSkeleton {
+  margin: 15px auto;
+  width: 135px;
+  height: 20px;
+  border-radius: 10px;
+  animation: skeleton-loading 1s linear infinite alternate;
+}
