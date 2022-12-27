@@ -76,7 +76,7 @@ const getMangaInfo = async (req, res) => {
     const mangaFolder = fs.readdirSync(pathFile)
     for (const items of mangaFolder) {
         if (id === path.basename(items, '.jpg') || id === path.basename(items, '.png')) {
-            image = fs.readFileSync(`${pathFile}\\${items}`, 'base64')
+            image = fs.readFileSync(`${pathFile}/${items}`, 'base64')
         }
     }
 
