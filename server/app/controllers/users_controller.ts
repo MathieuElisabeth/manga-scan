@@ -101,7 +101,7 @@ export default class UsersController {
       const user = auth.getUserOrFail()
       const { mangaId } = request.only(['mangaId'])
 
-      const manga = await Manga.findOrFail(mangaId)
+      await Manga.findOrFail(mangaId)
       
       // Check if bookmark exists
       const existingBookmark = await user

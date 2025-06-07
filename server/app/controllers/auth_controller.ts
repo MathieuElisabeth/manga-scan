@@ -1,7 +1,6 @@
 import type { HttpContext } from '@adonisjs/core/http'
 import User from '#models/user'
 import { signupValidator, signinValidator } from '#validators/auth'
-import { errors } from '@vinejs/vine'
 
 export default class AuthController {
   async signup({ request, response }: HttpContext) {
