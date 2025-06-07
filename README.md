@@ -35,4 +35,4 @@ Dans ````/server````:
 npm run dev
 ```
 
-N'oubliez pas de mettre vos informations de connexion à votre DB dans un fichier `.env`
+N'oubliez pas de mettre vos informations de connexion à votre DB dans un fichier `.env` et faire les migration.
