@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import bcrypt from "bcryptjs";
@@ -6,6 +5,7 @@ import { updateUser } from "../../../actions/user";
 import { useAppDispatch } from "../../../store";
 
 import "./MyAccount.css";
+import { api } from "../../../utils/api";
 
 const formUser = [
   {
@@ -142,9 +142,9 @@ const MyAccount = () => {
       data.password = hashPassword;
     }
 
-    axios
+    api
       .put(
-        `${import.meta.env.VITE_API_URL}/api/user/update/${user.username}`,
+        `${import.meta.env.VITE_API_URL}/api/user/profile`,
         data
       )
       .then((res) => {

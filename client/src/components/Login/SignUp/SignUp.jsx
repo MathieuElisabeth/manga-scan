@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./SignUp.css";
 
 import Navbar from "../../Navbar/Navbar";
-import axios from "axios";
+import { api } from "../../../utils/api";
 
 const SignUp = ({ history }) => {
   const [username, setUsername] = useState("");
@@ -25,8 +25,8 @@ const SignUp = ({ history }) => {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    axios
-      .post(`${import.meta.env.VITE_API_URL}/api/user/signup`, {
+    api
+      .post(`${import.meta.env.VITE_API_URL}/api/auth/signup`, {
         username,
         password,
         email,
@@ -37,7 +37,10 @@ const SignUp = ({ history }) => {
         setEmail("");
         history.push("/signin");
       })
-      .catch((err) => alert(err));
+      .catch((err) => {
+        const error = err.response.data.error.messages[0].message || err.response.data.error.message
+        alert(error)
+      });
   };
 
   return (

@@ -1,10 +1,12 @@
-export const login = (username, email, accessToken, bookmarks) => {
+import axios from "axios"
+import { api } from "../utils/api"
+
+export const login = (username, email, bookmarks) => {
   return {
       type: 'LOGIN',
       payload: {
           username,
           email,
-          accessToken,
           bookmarks
       }
   }
@@ -36,4 +38,22 @@ export const updateUser = (manga) => {
       payload: manga
   }
 }
+
+export const checkAuth = () => async (dispatch) => {
+  try {
+    const res = await api.get(`${import.meta.env.VITE_API_URL}/api/user/profile`);
+
+    if (!res.ok) throw new Error('Session expired');
+
+    const data = await res.json();
+
+    dispatch({
+      type: 'LOGIN',
+      payload: data,
+    });
+  } catch (err) {
+    dispatch({ type: 'LOGOUT' });
+  }
+};
+
 

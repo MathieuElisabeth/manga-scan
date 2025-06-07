@@ -7,9 +7,8 @@ Créez un compte et ajoutez vos mangas à vos favoris pour les trouver plus faci
 
 - React js
 - Redux
-- Node js
-- Express js
-- MongoDB
+- Adonis js
+- PostgreSQL
 
 
 ## Installation

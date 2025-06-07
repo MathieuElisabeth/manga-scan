@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import { useAppDispatch } from "../../../store";
 import { login } from "../../../actions/user";
 
 import "./SignIn.css";
 
 import Navbar from "../../Navbar/Navbar";
+import { api } from "../../../utils/api";
 
 const SignIn = ({ history }) => {
   const dispatch = useAppDispatch();
@@ -23,19 +23,17 @@ const SignIn = ({ history }) => {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    axios
-      .post(`${import.meta.env.VITE_API_URL}/api/user/signin`, {
+    api
+      .post(`${import.meta.env.VITE_API_URL}/api/auth/signin`, {
         username,
         password,
       })
       .then((res) => {
-        if (res.data.accessToken) {
-          const { username, email, accessToken, bookmarks } = res.data;
-          dispatch(login(username, email, accessToken, bookmarks));
+          const { username, email, bookmarks } = res.data;
+          dispatch(login(username, email, bookmarks));
           setUsername("");
           setPassword("");
           history.push("/");
-        }
       })
       .catch((err) => {
         alert("Incorrect username or password");

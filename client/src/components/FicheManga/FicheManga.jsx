@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 import { useAppDispatch } from "../../store";
 import { mangaInfo } from "../../actions/mangaInfo";
 import { addBookmark, removeBookmark } from "../../actions/user";
+import { api } from "../../utils/api";
 
 const FicheManga = ({ match, location }) => {
   const {
@@ -37,9 +38,8 @@ const FicheManga = ({ match, location }) => {
       console.log("Invalid request");
       return;
     }
-    axios
+    api
       .post(`${import.meta.env.VITE_API_URL}/api/user/bookmarks`, {
-        username: user.username,
         mangaId: manga._id,
       })
       .then((res) => {

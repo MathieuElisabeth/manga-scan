@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
-import store from "./store";
 import './App.css';
 
 
@@ -12,11 +11,18 @@ import SignUp from './components/Login/SignUp/SignUp'
 import SignIn from './components/Login/SignIn/SignIn'
 import PersonalSpace from './components/PersonalSpace/PersonalSpace'
 import ResetPassword from './components/Login/ResetPassword/ResetPassword'
-import { Provider } from "react-redux";
+import { useDispatch } from "react-redux";
+import { checkAuth } from "./actions/user";
 
 const App = () => {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(checkAuth())
+  }, [])
+
   return (
-    <Provider store={store}>
+
     <div className="App">
       <Switch>
        <Route path='/' exact component={Homepage} />
@@ -30,7 +36,6 @@ const App = () => {
        <Redirect to='/'/>
       </Switch>
     </div>
-    </Provider>
   );
 }
 

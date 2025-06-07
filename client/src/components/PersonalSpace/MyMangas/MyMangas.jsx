@@ -3,17 +3,17 @@ import React, { useEffect, useState } from "react";
 import "./MyMangas.css";
 
 import Manga from "../../Manga/Manga";
-import axios from "axios";
 import { useSelector } from "react-redux";
+import { api } from "../../../utils/api";
 
 const MyMangas = () => {
   const user = useSelector((state) => state.user);
   const [bookmarks, setBookmarks] = useState([]);
 
   useEffect(() => {
-    axios
+    api
       .get(
-        `${import.meta.env.VITE_API_URL}/api/user/bookmarks/${user.username}`
+        `${import.meta.env.VITE_API_URL}/api/user/bookmarks`
       )
       .then((res) => {
         setBookmarks(res.data);
